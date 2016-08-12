@@ -19,7 +19,12 @@ With that in mind, this reincarnation of VLV is using:
 
 ### Setup
 
+```
 clone repo
 npm install
 npm run typings install
+mongodb
 npm start
+```
+
+Open up your browser to http://localhost:3000 and you should see the homepage
