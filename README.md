@@ -14,7 +14,7 @@ With that in mind, this reincarnation of VLV is using:
 * Trails.js
 * MongoDB
 * Angular2
-** Typescript
+* Typescript
 * Gulp
 
 ### Setup
