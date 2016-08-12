@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
+import { HTTP_PROVIDERS } from '@angular/http';
+
 @Component({
   selector: 'my-app',
-  template: '<h1>My First Angular 2 App</h1>'
+  templateUrl: 'app/vlv.component.tpl.html'
 })
-export class AppComponent { }
+export class VlvComponent { }
