@@ -1,7 +1,7 @@
 'use strict'
 const path = require('path')
 const gulp = require('gulp')
-const less = require('gulp-less')
+const sass = require('gulp-sass')
 const gif = require('gulp-if')
 const typescript = require('gulp-typescript')
 const rename = require('gulp-rename')
@@ -17,7 +17,7 @@ module.exports = {
   defaultTaskName: 'default',
 
   tasks: {
-    default: ['compile', 'less', 'copyLibs', 'copyAssets', 'watch'],
+    default: ['compile', 'sass', 'copyLibs', 'copyAssets', 'watch'],
     production: ['clean'],
 
     clean: () => {
@@ -39,14 +39,14 @@ module.exports = {
           .pipe(gulp.dest(path.join(dest, 'app')))
       }
     },
-    less: {
+    sass: {
       dependsOf: ['clean'],
       task: () => {
-        const lessSource = path.join(src, 'less', '*.less')
+        const scssSource = path.join(src, 'scss', '*.scss')
         return gulp
-          .src(lessSource)
+          .src(scssSource)
           .pipe(sourcemaps.init())
-          .pipe(less())
+          .pipe(sass())
           .pipe(sourcemaps.write('.'))
           .pipe(gulp.dest(path.join(dest, 'styles')))
       }
