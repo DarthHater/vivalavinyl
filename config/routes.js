@@ -27,5 +27,16 @@ module.exports = [
     method: [ 'GET' ],
     path: '/api/v1/default/info',
     handler: 'DefaultController.info'
+  },
+  {
+    method: [ 'GET'],
+    path: '/api/v1/threads',
+    handler: 'ThreadController.all'
+  },
+  {
+    method: [ 'PUT' ],
+    path: '/api/v1/threads',
+    handler: 'ThreadController.put'
   }
+
 ]

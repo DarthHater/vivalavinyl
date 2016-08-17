@@ -1,8 +1,13 @@
 import { Component } from '@angular/core';
-import { HTTP_PROVIDERS } from '@angular/http';
+import { ThreadComponent } from './components/index'
 
 @Component({
-  selector: 'my-app',
-  templateUrl: 'app/vlv.component.tpl.html'
+    selector: 'my-app',
+    template: `
+        <h1>Threads</h1>
+
+        <thread-widget></thread-widget>
+        `,
+        directives:[ThreadComponent]
 })
-export class VlvComponent { }
+export class AppComponent { }

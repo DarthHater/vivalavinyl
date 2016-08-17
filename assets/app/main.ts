@@ -1,4 +1,5 @@
-import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { VivaLaVinylModule } from './app.module';
+import { platformBrowserDynamic }    from '@angular/platform-browser-dynamic';
 
-platformBrowserDynamic().bootstrapModule(VivaLaVinylModule);
+import { AppModule } from './app.module';
+
+platformBrowserDynamic().bootstrapModule(AppModule);

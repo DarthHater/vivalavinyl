@@ -1,10 +1,13 @@
-import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
-import { VlvComponent }  from './app.component';
+import { NgModule }       from '@angular/core';
+import { BrowserModule  } from '@angular/platform-browser';
+import { HTTP_PROVIDERS } from '@angular/http';
+import { FormsModule } from '@angular/forms';
+import { AppComponent }   from './app.component';
 
 @NgModule({
-  imports:      [ BrowserModule ],
-  declarations: [ VlvComponent ],
-  bootstrap:    [ VlvComponent ]
+    declarations: [AppComponent],
+    imports:      [BrowserModule, FormsModule],
+    bootstrap:    [AppComponent],
+    providers:    [HTTP_PROVIDERS],
 })
-export class VivaLaVinylModule { }
+export class AppModule {}
