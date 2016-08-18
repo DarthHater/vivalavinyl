@@ -17,7 +17,7 @@ module.exports = {
   defaultTaskName: 'default',
 
   tasks: {
-    default: ['compile', 'sass', 'copyLibs', 'copyAssets', 'watch'],
+    default: ['compile', 'sass', 'fonts', 'copyLibs', 'copyAssets', 'watch'],
     production: ['clean'],
 
     clean: () => {
@@ -49,6 +49,15 @@ module.exports = {
           .pipe(sass())
           .pipe(sourcemaps.write('.'))
           .pipe(gulp.dest(path.join(dest, 'styles')))
+      }
+    },
+    fonts: {
+      dependsOf: ['clean'],
+      task: () => {
+        const fontsSource = path.join('node_modules', 'font-awesome', 'fonts', 'fontawesome-webfont.*')
+        return gulp
+          .src(fontsSource)
+          .pipe(gulp.dest(path.join(dest, 'fonts')))
       }
     },
     copyLibs: {
@@ -85,7 +94,8 @@ module.exports = {
         return gulp.src([
             path.join(src, 'app', '**', '*'), 
             path.join(src, 'index.html'), 
-            path.join(src, '*.css'), 
+            path.join(src, '*.css'),
+            path.join(src, '*.woff'),
             path.join('!app', '**', '*.ts')], 
             { base : src })
           .pipe(gulp.dest(dest))

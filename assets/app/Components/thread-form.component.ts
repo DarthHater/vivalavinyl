@@ -20,7 +20,7 @@ import { Thread } from '../models/thread'
                 <br />
                 <textarea class="form-control" rows="3" placeholder="Text" [(ngModel)]="model.text" name="text"></textarea>
                 <br />
-                <button *ngIf="!editing" type="submit" class="btn btn-primary btn-block">Say It</button>
+                <button *ngIf="!editing" type="submit" class="btn btn-primary btn-block">Say It Loud</button>
                 <button *ngIf="editing" type="submit" class="btn btn-warning btn-block">Update</button>
             </div>
         </form>

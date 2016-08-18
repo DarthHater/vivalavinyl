@@ -11,12 +11,12 @@ import { EmitterService } from '../emitter.service';
     selector: 'thread-list',
     template: `
         <thread-box 
-        [editId]="editId" 
-        [listId]="listId" 
-        *ngFor="let thread of threads" 
-        [thread]="thread">
-    </thread-box>
-    `,
+            [editId]="editId" 
+            [listId]="listId" 
+            *ngFor="let thread of threads" 
+            [thread]="thread">
+        </thread-box>
+        `,
     directives: [ThreadBoxComponent],
     providers: [ThreadService]
 })

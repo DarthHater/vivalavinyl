@@ -12,7 +12,7 @@ import { ThreadService } from '../services/thread.service';
                 {{thread.title}}
             </div>
             <div class="panel-footer">
-                <button class="btn btn-info" (click)="editThread()"><span class="glyphicon glyphicon-edit"></span></button>
+                <button class="btn btn-info" (click)="editThread()"><i class="fa fa-edit"></i></button>
             </div>
         </div>
         `
