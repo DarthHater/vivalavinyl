@@ -14,7 +14,7 @@ import { Thread } from '../models/thread'
        <form (ngSubmit)="submitThread()">
             <div class="form-group">
                 <div class="input-group">
-                    <span class="input-group-addon" id="basic-addon1"><span class="glyphicon glyphicon-user"></span></span>
+                    <span class="input-group-addon" id="basic-addon1"><span class="fa fa-user"></span></span>
                     <input type="text" class="form-control" placeholder="Author" [(ngModel)]="model.author" name="author">
                 </div>
                 <br />
