@@ -1,7 +1,7 @@
 import { Component} from '@angular/core';
 import { ThreadFormComponent } from './thread-form.component'
 import { ThreadListComponent } from './thread-list.component'
-import { EmitterService } from '../emitter.service';
+import { EmitterService } from '../../emitter.service';
 
 @Component({
     selector: 'thread-widget',

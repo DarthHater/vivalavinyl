@@ -7,12 +7,14 @@
   var map = {
     'app':                        '../app', // 'dist',
     '@angular':                   'lib',
-    'rxjs':                       'lib/rxjs'
+    'rxjs':                       'lib/rxjs',
+    'localStorage':               'lib/localStorage'
   };
   // packages tells the System loader how to load when no filename and/or no extension
   var packages = {
     'app':                        { main: 'main.js',  defaultExtension: 'js' },
     'rxjs':                       { defaultExtension: 'js' },
+    'localStorage':               { main: 'localStorage.js', defaultExtention: 'js' }, 
     'angular2-in-memory-web-api': { main: 'index.js', defaultExtension: 'js' },
   };
   var ngPackageNames = [

@@ -66,6 +66,7 @@ module.exports = {
         var libs = {
           'system-polyfills': 'node_modules/systemjs/dist/system-polyfills.js',
           'systemjs': 'node_modules/systemjs/dist/system.js',
+          'localStorage': 'node_modules/localStorage/lib/localStorage.js',
           'rxjs': 'node_modules/rxjs/**/*.js',
           'shimjs': 'node_modules/core-js/client/shim.min.js',
           'zonejs': 'node_modules/zone.js/dist/zone.js',

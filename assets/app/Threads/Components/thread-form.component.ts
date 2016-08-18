@@ -4,7 +4,7 @@ import { Observable } from 'rxjs/Rx';
 
 import { ThreadBoxComponent } from './thread-box.component';
 import { ThreadService } from '../services/thread.service';
-import { EmitterService } from '../emitter.service';
+import { EmitterService } from '../../emitter.service';
 import { Thread } from '../models/thread'
 
 // Component decorator

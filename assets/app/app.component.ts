@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ThreadComponent } from './components/index'
+import { ThreadComponent } from './threads/components/index'
 
 @Component({
     selector: 'my-app',

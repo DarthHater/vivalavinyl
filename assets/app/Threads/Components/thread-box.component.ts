@@ -1,6 +1,6 @@
 import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Thread } from '../models/thread'
-import { EmitterService } from '../emitter.service';
+import { EmitterService } from '../../emitter.service';
 import { ThreadService } from '../services/thread.service';
 
 @Component({
