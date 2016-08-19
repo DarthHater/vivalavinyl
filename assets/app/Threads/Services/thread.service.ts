@@ -33,7 +33,7 @@ export class ThreadService {
      	let headers = new Headers({ 'Content-Type': 'application/json'});
      	let options = new RequestOptions({ headers: headers});
 
-     	return this.http.put(`${this.threadsUrl}/$body['id']}`, threadString, options)
+     	return this.http.put(this.threadsUrl, threadString, options)
      			.map((res:Response) => res.json())
      			.catch((error:any) => Observable.throw(error.json().error || 'Server error'));
      }

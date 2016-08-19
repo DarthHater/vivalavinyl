@@ -6,14 +6,11 @@ import { ThreadService } from '../services/thread.service';
 @Component({
     selector: 'thread-box',
     template: `
-       <div class="panel panel-default">
-            <div class="panel-heading">{{thread.author}}</div>
-            <div class="panel-body">
-                {{thread.title}}
-            </div>
-            <div class="panel-footer">
-                <button class="btn btn-info" (click)="editThread()"><i class="fa fa-edit"></i></button>
-            </div>
+        <div class="row list">
+            <div class="col-xs-4 col-md-2"> Posted by <a href="#/user/{{ thread.author }}" class="memberlink">{{ thread.createdBy }}</a> </div>
+            <div class="col-xs-8 col-md-6"> <a href="#/thread/view/{{ thread._id }}">{{ thread.title }}</a></div>
+            <div class="col-xs-2 col-md-1"> {{ thread.numberOfPosts }} posts </div>
+            <div class="col-xs-10 col-md-3"> Last post by {{ thread.updatedBy }}<br>on {{ thread.dateUpdated | date: 'medium' }} </div>
         </div>
         `
     // No providers here because they are passed down from the parent component

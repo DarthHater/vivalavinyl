@@ -17,6 +17,11 @@ module.exports = class ThreadService extends Service {
 
 	putThread(body) {
 		body.id = Date.now();
+		body.createdBy = body.author;
+		body.updatedBy = body.author;
+		body.datePosted = Date.now();
+		body.dateUpdated = Date.now();
+
 		var thread = this.app.orm.Thread(body)
 			.save(function (err) {
 				if (err) return '500';

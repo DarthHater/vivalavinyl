@@ -18,7 +18,7 @@ import { Thread } from '../models/thread'
                     <input type="text" class="form-control" placeholder="Author" [(ngModel)]="model.author" name="author">
                 </div>
                 <br />
-                <textarea class="form-control" rows="3" placeholder="Text" [(ngModel)]="model.text" name="text"></textarea>
+                <textarea class="form-control" rows="3" placeholder="Text" [(ngModel)]="model.title" name="title"></textarea>
                 <br />
                 <button *ngIf="!editing" type="submit" class="btn btn-primary btn-block">Say It Loud</button>
                 <button *ngIf="editing" type="submit" class="btn btn-warning btn-block">Update</button>
@@ -41,7 +41,7 @@ export class ThreadFormComponent implements OnChanges {
      @Input() editId: string;
      @Input() listId: string;
 
-    submitComment(){
+    submitThread() {
         // Variable to hold a reference of addComment/updateComment
         let threadOperation:Observable<Thread[]>;
 
