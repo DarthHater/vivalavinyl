@@ -15,6 +15,14 @@ module.exports = class ThreadService extends Service {
 			});
 	}
 
+	getThread(id, callback) {
+		var thread = this.app.orm.Thread.findOne({ _id: id})
+			.exec(function (err, thread) {
+				console.log(thread);
+				callback(thread);
+			});
+	}
+
 	putThread(body) {
 		body.id = Date.now();
 		body.createdBy = body.author;

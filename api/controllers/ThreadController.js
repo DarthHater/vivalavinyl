@@ -13,6 +13,13 @@ module.exports = class ThreadController extends Controller{
 		});
 	}
 
+	thread(req, res) {
+		var id = req.params.id;
+		this.app.services.ThreadService.getThread(id, function(data) {
+			return res.status(200).send(data);
+		});
+	}
+
 	put(req, res) {
 		this.app.services.ThreadService.putThread(req.body);
 

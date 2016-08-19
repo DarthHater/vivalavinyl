@@ -34,9 +34,23 @@ module.exports = [
     handler: 'ThreadController.all'
   },
   {
+    method: ['GET'],
+    path: '/api/v1/threads/:id',
+    handler: 'ThreadController.thread'
+  },
+  {
     method: [ 'PUT' ],
     path: '/api/v1/threads',
     handler: 'ThreadController.put'
+  },
+  {
+    method: ['GET'],
+    path: '/api/v1/posts/:id',
+    handler: 'PostController.all'
+  },
+  {
+    method: [ 'PUT' ],
+    path: '/api/v1/posts',
+    handler: 'PostController.put'
   }
-
 ]
