@@ -6,7 +6,7 @@ import { ThreadComponent } from './threads/components/index'
     template: `
         <h1>Threads</h1>
 
-        <thread-widget></thread-widget>
+        <router-outlet></router-outlet>
         `,
         directives:[ThreadComponent]
 })

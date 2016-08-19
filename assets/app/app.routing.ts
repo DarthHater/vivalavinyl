@@ -1,8 +1,9 @@
-import { Routes, RouterModule }   from '@angular/router';
+import { Routes, RouterModule } from '@angular/router';
 import { ThreadComponent } from './threads/components/index';
 import { LoginComponent } from './login/components/index';
 
 const appRoutes: Routes = [
+  { path: '', component: ThreadComponent},
   { path: 'login', component: LoginComponent },
   { path: 'thread', component: ThreadComponent }
 ];

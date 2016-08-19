@@ -2,13 +2,15 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Thread } from '../models/thread'
 import { EmitterService } from '../../emitter.service';
 import { ThreadService } from '../services/thread.service';
+import { RouterOutlet, RouterLink } from '@angular/router';
 
 @Component({
     selector: 'thread-box',
+    directives: [RouterOutlet, RouterLink],
     template: `
         <div class="row list">
-            <div class="col-xs-4 col-md-2"> Posted by <a href="#/user/{{ thread.author }}" class="memberlink">{{ thread.createdBy }}</a> </div>
-            <div class="col-xs-8 col-md-6"> <a href="#/thread/view/{{ thread._id }}">{{ thread.title }}</a></div>
+            <div class="col-xs-4 col-md-2"> Posted by <a routerLink="/user/{{ thread.author }}" class="memberlink">{{ thread.createdBy }}</a> </div>
+            <div class="col-xs-8 col-md-6"> <a routerLink="/thread/{{ thread._id }}">{{ thread.title }}</a></div>
             <div class="col-xs-2 col-md-1"> {{ thread.numberOfPosts }} posts </div>
             <div class="col-xs-10 col-md-3"> Last post by {{ thread.updatedBy }}<br>on {{ thread.dateUpdated | date: 'medium' }} </div>
         </div>
