@@ -10,19 +10,16 @@
 'use strict'
 
 module.exports = [
-
-  /**
-   * Render the Default view
-   */
   {
     method: 'GET',
-    path: '/',
+    path: '/{action}',
     handler: 'ViewController.all'
   },
-
-  /**
-   * Constrain the DefaultController.info handler to accept only GET requests.
-   */
+  {
+    method: 'GET',
+    path: '/{action}/{id}',
+    handler: 'ViewController.all'
+  },
   {
     method: [ 'GET' ],
     path: '/api/v1/default/info',
