@@ -14,8 +14,8 @@
 
 module.exports = {
 
-  DefaultController: {
-    info: [ ]
+  ThreadController: {
+    all: [ 'AuthPolicy.isAuthenticated' ],
+    put: [ 'AuthPolicy.isAuthenticated' ]
   }
-
 }
