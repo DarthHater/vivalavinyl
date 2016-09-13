@@ -24,34 +24,31 @@ module.exports = class User extends Model {
 
   static schema () {
   	return {
-  		email: { 
-  			type: String, 
-  			required: true,
-  			unique: true 
+  		username: { 
+  			type: String
   		},
   		password: {
-  			type: String,
-  			required: true
-  		},
-  		emailAddress: {
-  			type: String,
-  			required: true,
-  			unique: true
-  		},
-  		firstName: String,
-  		lastName: String,
-  		threads: {
-  			type: Number,
-  			default: 0
-  		},
-  		posts: {
-  			type: Number,
-  			default: 0
-  		},
-  		createdAt: {
-  			type: Date,
-  			default: Date.now
+  			type: String
   		}
+  		// emailAddress: {
+  		// 	type: String,
+  		// 	required: true,
+  		// 	unique: true
+  		// },
+  		// firstName: String,
+  		// lastName: String,
+  		// threads: {
+  		// 	type: Number,
+  		// 	default: 0
+  		// },
+  		// posts: {
+  		// 	type: Number,
+  		// 	default: 0
+  		// },
+  		// createdAt: {
+  		// 	type: Date,
+  		// 	default: Date.now
+  		// }
   	}
   }
 

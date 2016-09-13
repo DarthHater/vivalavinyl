@@ -22,7 +22,8 @@ module.exports = {
     require('trailpack-express'), 
     require('trailpack-mongoose'), 
     require('trailpack-gulp'),
-    require('trailpack-passport-auth')
+    require('trailpack-footprints'),
+    require('trailpack-passport')
   ],
 
   /**

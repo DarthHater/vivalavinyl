@@ -22,7 +22,6 @@ module.exports = {
    * Middlewares to load (in order)
    */
   middlewares: {
-
     
     //middlewares loading order
     order: [

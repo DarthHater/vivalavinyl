@@ -1,11 +1,11 @@
+// config/passport.js
 'use strict'
-
-const SECRET = process.env.TOKEN_SECRET || 'mysupersecuretoken'
 
 const JwtStrategy = require('passport-jwt').Strategy
 const ExtractJwt = require('passport-jwt').ExtractJwt
 
 const EXPIRES_IN_SECONDS = 60 * 60 * 24
+const SECRET = process.env.tokenSecret || 'mysupersecuretoken';
 const ALGORITHM = 'HS256'
 const ISSUER = 'localhost'
 const AUDIENCE = 'localhost'
@@ -15,9 +15,10 @@ module.exports = {
     login: '/',//Login successful
     logout: '/'//Logout successful
   },
-  /**
-   * Auth strategies allowed
-   */
+  //Called when user is logged, before returning the json response
+  onUserLogged: (app, user) => {
+      return Promise.resolve(user)
+  },
   strategies: {
     jwt: {
       strategy: JwtStrategy,
@@ -32,12 +33,15 @@ module.exports = {
         secretOrKey: SECRET,
         issuer: ISSUER,
         audience: AUDIENCE,
-        jwtFromRequest: ExtractJwt.fromAuthHeader() //Authorization: JWT JSON_WEB_TOKEN_STRING
+        jwtFromRequest: ExtractJwt.fromAuthHeader()
       }
     },
-    //Enable local strategy
+
     local: {
-      strategy: require('passport-local').Strategy
-    },
+      strategy: require('passport-local').Strategy,
+      options: {
+        usernameField: 'username' // If you want to enable both username and email just remove this field
+      }
+    }
   }
 }

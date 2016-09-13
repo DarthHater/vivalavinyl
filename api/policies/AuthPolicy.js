@@ -10,8 +10,6 @@ module.exports = class AuthPolicy extends Policy {
 	isAuthenticated(req, res, next) {
 		var token;
 
-		console.log('Drake Voice: We Made It');
-
 		if (req.headers && req.headers.authorization) {
 			return null;
 		}
